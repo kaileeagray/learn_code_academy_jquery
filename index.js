@@ -1,13 +1,28 @@
 $(document).ready(function() {
-  $('#panel1').hide(300).delay(100).show(1000).slideUp(1000).fadeToggle(1000);
+  $('#btn1').html('my button');
 
-  $('#panel2').css({
-    color: 'red',
-    fontWeight: 'bold',
+  $('#panel1').on('click', function() {
+    $('#panel1').fadeToggle(200);
   });
 
-  $('#panel3').css({
-    opacity:'0.5'
+  $('#btn2').on('click', function() {
+    $('#panel2').fadeToggle(200);
+  });
+
+  $('#btn3').on('click', function() {
+    $('#panel3').fadeToggle(200);
+  });
+
+  $('#btn4').on('click', function() {
+    $('#panel4').fadeToggle(200);
+  });
+
+  $('#panel1').on('mouseover', function() {
+    $('#panel1').fadeToggle(200);
+  });
+
+  $('#btn1').on('click', function() {
+    $('#panel1 .panel-body').html('my new panel content');
   });
 
 });
