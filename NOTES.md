@@ -1,4 +1,5 @@
 # Notes from Tutorial 5
++ any time a variable is defined using a jquery selector add $ to front
 
 
 # Notes from Tutorial 4
