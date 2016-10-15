@@ -1,3 +1,6 @@
+# Notes from Tutorial 6
++ photo source: https://creativemarket.com/alohaphilly/858894-Pool-Social-Media-Photo-5-Pack
+
 # Notes from Tutorial 5
 + any time a variable is defined using a jquery selector add $ to front
 
