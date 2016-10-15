@@ -1,4 +1,7 @@
 # Notes from Tutorial 6
++ $('#slider .slides').animate({'margin-left': -720}, 1000)
++ $('#slider .slides').animate({'margin-left': '-=720'}, 1000)
+
 + photo source: https://creativemarket.com/alohaphilly/858894-Pool-Social-Media-Photo-5-Pack
 
 # Notes from Tutorial 5
