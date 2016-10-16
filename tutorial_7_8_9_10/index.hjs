@@ -25,9 +25,8 @@
         </div>
     </div>
   </div>
-
     <script src="jquery-3.1.1.min.js"></script>
     <script src="index7.js"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js" integrity="sha256-Mli7YfW2nzMHbdDJHhPd0sf+dxiCrf+TRekNSrfDJCY=" crossorigin="anonymous"></script>
   </body>
 </html>

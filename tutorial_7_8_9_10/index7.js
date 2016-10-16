@@ -4,8 +4,15 @@ $(function() {
   var $name = $('#name');
   var $drink = $('#drink');
 
+  var orderTemplate = "" +
+  "<li>" +
+  "<p><strong>Name:</strong> {{name}} </p>" +
+  "<p><strong>Drink:</strong> {{drink}} </p>" +
+  "<button data-id='{{id}}' class='remove'>x</button>"  +
+  "</li>";
+
   function addOrder(order) {
-    $orders.append('<li>name: ' + order.name + ', drink: ' + order.drink + '</li>');
+    $orders.append(Mustache.render(orderTemplate, order));
   };
 
   $.ajax({
@@ -37,6 +44,18 @@ $(function() {
         addOrder(newOrder);
       }
     });
+  });
 
+
+  $orders.delegate('.remove', 'click', function() {
+    var $li = $(this).closest('li');
+    $li.remove();
+
+    $.ajax({
+      type: 'DELETE',
+      url: 'http://rest.learncode.academy/api/learncode/friends' + $(this).attr('data-id'),
+      success: function() {
+      }
+    });
   });
 });
