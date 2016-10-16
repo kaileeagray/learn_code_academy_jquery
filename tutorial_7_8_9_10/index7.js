@@ -20,7 +20,9 @@ $(function() {
     url: 'http://rest.learncode.academy/api/learncode/friends',
     success: function(data) {
       $.each(data, function(i, order) {
-        addOrder(order);
+        if (order.id) {
+          addOrder(order);
+        }
       });
     },
     error: function() {
@@ -46,18 +48,21 @@ $(function() {
     });
   });
 
-
+  // listen to remove items that aren't there yet
+  // delegate bc
   $orders.delegate('.remove', 'click', function() {
+
     var $li = $(this).closest('li');
-    $li.fadeOut(300, function() {
-      $(this).remove();
-    });
 
     $.ajax({
       type: 'DELETE',
-      url: 'http://rest.learncode.academy/api/learncode/friends' + $(this).attr('data-id'),
+      url: 'http://rest.learncode.academy/api/learncode/friends/' + $(this).attr('data-id'),
       success: function() {
+        $li.fadeOut(300, function() {
+          $(this).remove();
+        });
       }
     });
   });
+
 });
