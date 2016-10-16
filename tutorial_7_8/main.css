@@ -13,4 +13,12 @@ ul {
 
 ul li {
   list-style-type: none;
+  background: #dfdfdf;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
 }

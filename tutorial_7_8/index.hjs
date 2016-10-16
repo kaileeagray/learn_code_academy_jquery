@@ -11,11 +11,11 @@
     <div class="container-fluid">
       <h1>jQuery Ajax Tutorial</h1>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <h2>Coffee Orders</h2>
           <ul id="orders"></ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="input-group">
           <h4>Add a Coffee Order</h4>
           <p>name: <input type="text" id="name"></p>
