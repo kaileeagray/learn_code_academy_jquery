@@ -1,15 +1,13 @@
+
+
+
 $(function() {
 
   var $orders = $('#orders');
   var $name = $('#name');
   var $drink = $('#drink');
 
-  var orderTemplate = "" +
-  "<li>" +
-  "<p><strong>Name:</strong> {{name}} </p>" +
-  "<p><strong>Drink:</strong> {{drink}} </p>" +
-  "<button data-id='{{id}}' class='remove'>x</button>"  +
-  "</li>";
+  var orderTemplate = $('#order-template').html();
 
   function addOrder(order) {
     $orders.append(Mustache.render(orderTemplate, order));

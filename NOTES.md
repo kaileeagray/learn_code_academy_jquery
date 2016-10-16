@@ -1,4 +1,6 @@
-
+# Notes from 10
++ PUT
++ RESTful get to view, post to create, put with id to edit
 
 # Notes from 7
 + AJAX: Asynchronous JavaScript and XML
