@@ -15,11 +15,23 @@
           <h2>Coffee Orders</h2>
           <ul id="orders"></ul>
 
+          <!-- in case older than IE 8, use script with type="text/template" instead of template -->
           <template id="order-template">
-            <li>
-            <p><strong>Name:</strong> {{name}} </p>
-            <p><strong>Drink:</strong> {{drink}} </p>
-            <button data-id='{{id}}' class='remove'>x</button>
+            <li data-id='{{id}}'>
+              <p>
+                <strong>Name:</strong>
+                <span class="noedit name">{{name}}</span>
+                <input class="edit name"/>
+              </p>
+              <p>
+                <strong>Drink:</strong>
+                <span class="noedit drink">{{drink}}</span>
+                <input class="edit drink"/>
+              </p>
+              <button data-id='{{id}}' class='remove'>x</button>
+              <button class='editOrder noedit'>Edit</button>
+              <button class='saveEdit edit'>Save</button>
+              <button class='cancelEdit edit'>Cancel</button>
             </li>
           </template>
 

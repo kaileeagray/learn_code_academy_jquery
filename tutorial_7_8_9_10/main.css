@@ -18,7 +18,14 @@ ul li {
   margin-bottom: 10px;
 }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
+ul li .edit {
+  display: none;
+}
+
+ul li.edit .edit {
+  display: initial;
+}
+
+ul li.edit .noedit {
+  display: none;
 }
