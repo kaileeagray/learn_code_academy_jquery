@@ -1,4 +1,5 @@
 $(function() {
+
   var $orders = $('#orders');
   var $name = $('#name');
   var $drink = $('#drink');
@@ -7,23 +8,19 @@ $(function() {
     $orders.append('<li>name: ' + order.name + ', drink: ' + order.drink + '</li>');
   };
 
-  var orders = [{"id":1, "name":"Will", "drink":"Americano w/ Creme"}, {"id":2, "name":"Laura", "drink":"Vanilla Latte"}];
-  $.each(orders, function(i, order) {
-      addOrder(order);
-  });
-
   $.ajax({
     type: 'GET',
-    url: '/api/orders',
-    success: function(orders) {
-      $.each(orders, function(i, order) {
-        $orders.append('<li>name: ' + order.name + ', drink: ' + order.drink + '</li>');
+    url: 'http://rest.learncode.academy/api/learncode/friends',
+    success: function(data) {
+      $.each(data, function(i, order) {
+        addOrder(order);
       });
     },
     error: function() {
       alert('error loading orders');
     }
   });
+
 
   $('#add-order').on('click', function() {
 
@@ -34,16 +31,12 @@ $(function() {
 
     $.ajax({
       type: 'POST',
-      url: '/api/orders'
+      url: 'http://rest.learncode.academy/api/learncode/friends',
       data: order,
       success: function(newOrder) {
-          addOrder(newOrder);
-        error: function() {
-          alert('error saving order');
-        }
+        addOrder(newOrder);
       }
     });
 
   });
-
 });

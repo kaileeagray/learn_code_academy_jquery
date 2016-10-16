@@ -17,11 +17,11 @@
         </div>
         <div class="col-lg-6">
           <div class="input-group">
-          <h4>Add a Coffee Order</h4>
-          <p>name: <input type="text" id="name"></p>
-          <p>drink: <input type="text" id="drink"></p>
-          <button id="add-order" class="btn btn-block btn-primary">Add!</button>
-        </div>
+            <h4>Add a Coffee Order</h4>
+            <p>name: <input type="text" id="name"></p>
+            <p>drink: <input type="text" id="drink"></p>
+            <button id="add-order">Add!</button>
+          </div>
         </div>
     </div>
   </div>
@@ -29,6 +29,5 @@
     <script src="jquery-3.1.1.min.js"></script>
     <script src="index7.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
