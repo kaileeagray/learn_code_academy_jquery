@@ -1,3 +1,8 @@
+# Notes from 7
++ AJAX: Asynchronous JavaScript and XML
+  - use of the XMLHttpRequest object to communicate with server-side scripts. It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files
++ API's
+
 # Notes from Tutorial 6
 + $('#slider .slides').animate({'margin-left': -720}, 1000)
 + $('#slider .slides').animate({'margin-left': '-=720'}, 1000)
