@@ -49,7 +49,9 @@ $(function() {
 
   $orders.delegate('.remove', 'click', function() {
     var $li = $(this).closest('li');
-    $li.remove();
+    $li.fadeOut(300, function() {
+      $(this).remove();
+    });
 
     $.ajax({
       type: 'DELETE',
